@@ -127,6 +127,22 @@ services:
     volumes:
       - volume_group_8:/data
       - ./settings:/settings
+      
+  server_group_9:
+    image: nodered/node-red:latest
+    environment:
+      TZ: Europe/Amsterdam
+      NODE_RED_ADMIN_PW: ${NODE_RED_PW_9}
+    ports:
+      - "${PORT_GROUP_9}:1880"
+    command:
+      - "--settings"
+      - "/settings/settings.js"
+    networks:
+      - network_group_9
+    volumes:
+      - volume_group_9:/data
+      - ./settings:/settings
 
 volumes:
   volume_group_1:
@@ -137,6 +153,7 @@ volumes:
   volume_group_6:
   volume_group_7:
   volume_group_8:
+  volume_group_9:
 
 networks:
   network_group_1:
@@ -147,4 +164,5 @@ networks:
   network_group_6:
   network_group_7:
   network_group_8:
+  network_group_9:
 
