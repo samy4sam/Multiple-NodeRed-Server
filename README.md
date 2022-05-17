@@ -1,6 +1,9 @@
 # Multiple-NodeRed-Servers
 Repository with Docker-Compose file to deploy multiple Node-Red servers at once. Each server is protected with its own password.
 
+## Requirements 
+
+
 ## How to use
 
 ### 1. Clone this Repository
@@ -24,13 +27,14 @@ nano .env
 ```
 Adjust all **NODE_RED_PW_n**. 
 
+The passwords must be passed hashed (bcrypt) to the Node-Red servers [Node-Red Doc](https://nodered.org/docs/user-guide/runtime/securing-node-red)..
 To hash the passwords this node-red command can be used:
 ```
 node-red admin hash-pw
 ```
-Link to Node-Red doc: [Link](https://nodered.org/docs/user-guide/runtime/securing-node-red).
+or another bcrypt-hash generator like [bcrypt-generator](https://bcrypt-generator.com/)
 
-The unencrypted passwords can be stored in the .env file as **NODE_RED_PW_n_Blank**. However, this is optional and is not used by the Docker container.
+The unencrypted passwords can be stored in the .env file as **NODE_RED_PW_n_Blank**. However, this is optional and is not used by the Docker containers.
 
 ### 5. Create and start Node-Red-Containers
 ```
