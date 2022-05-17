@@ -2,7 +2,7 @@
 Repository with Docker-Compose file to deploy multiple Node-Red servers at once. Each server is protected with its own password.
 
 ## Requirements 
-
+This repository requires **Docker** and **Docker Compose** to be pre-installed. Optionally also Node-Red to hash the passwords.
 
 ## How to use
 
@@ -27,7 +27,7 @@ nano .env
 ```
 Adjust all **NODE_RED_PW_n**. 
 
-The passwords must be passed hashed (bcrypt) to the Node-Red servers [Node-Red Doc](https://nodered.org/docs/user-guide/runtime/securing-node-red)..
+The passwords must be passed hashed (bcrypt) to the Node-Red servers (see [Node-Red Doc](https://nodered.org/docs/user-guide/runtime/securing-node-red)).
 To hash the passwords this node-red command can be used:
 ```
 node-red admin hash-pw
