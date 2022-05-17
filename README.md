@@ -38,4 +38,4 @@ docker-compose up
 ```
 ---
 ## Adjust number of servers
-Docker does not allow you to dynamically change the number of services. So, if you want to change the number of Node Red servers, you need to manually adjust the docker-compose.yml and .env files accordingly.
+Docker does not allow you to dynamically change the number of services. So, if you want to change the number of Node Red servers, you need to manually adjust the **docker-compose.yml** and **.env** files accordingly.
