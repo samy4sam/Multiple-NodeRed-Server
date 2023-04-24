@@ -1,168 +1,147 @@
 version: "3"
 services:
-  server_group_1:
+  node-red_server_1:
     image: nodered/node-red:latest
     environment:
-      TZ: Europe/Amsterdam
-      NODE_RED_ADMIN_PW: ${NODE_RED_PW_1}
+      - TZ=Europe/Zurich
+      - NODE_RED_ADMIN_PW=${NODE_RED_PW_1}
     ports:
-      - "${PORT_GROUP_1}:1880"
+      - "${PORT_1}:1880"
     command:
       - "--settings"
       - "/settings/settings.js"
     networks:
-      - network_group_1
+      - network_server_1
     volumes:
-      - volume_group_1:/data
-      - ./settings:/settings
+      - volume_server_1:/data
+      - ./settings/settings.js:/data/settings.js
+    env_file:
+      - .env
 
-  server_group_2:
+  node-red_server_2:
     image: nodered/node-red:latest
     environment:
-      TZ: Europe/Amsterdam
-      NODE_RED_ADMIN_PW: ${NODE_RED_PW_2}
+      - TZ=Europe/Zurich
+      - NODE_RED_ADMIN_PW=${NODE_RED_PW_2}
     ports:
-      - "${PORT_GROUP_2}:1880"
+      - "${PORT_2}:1880"
     command:
       - "--settings"
       - "/settings/settings.js"
     networks:
-      - network_group_2
+      - network_server_2
     volumes:
-      - volume_group_2:/data
-      - ./settings:/settings
+      - volume_server_2:/data
+      - ./settings/settings.js:/data/settings.js
+    env_file:
+      - .env
 
-  server_group_3:
+  node-red_server_3:
     image: nodered/node-red:latest
     environment:
-      TZ: Europe/Amsterdam
-      NODE_RED_ADMIN_PW: ${NODE_RED_PW_3}
+      - TZ=Europe/Zurich
+      - NODE_RED_ADMIN_PW=${NODE_RED_PW_3}
     ports:
-      - "${PORT_GROUP_3}:1880"
+      - "${PORT_3}:1880"
     command:
       - "--settings"
       - "/settings/settings.js"
     networks:
-      - network_group_3
+      - network_server_3
     volumes:
-      - volume_group_3:/data
-      - ./settings:/settings
+      - volume_server_3:/data
+      - ./settings/settings.js:/data/settings.js
+    env_file:
+      - .env
 
-  server_group_4:
+  node-red_server_4:
     image: nodered/node-red:latest
     environment:
-      TZ: Europe/Amsterdam
-      NODE_RED_ADMIN_PW: ${NODE_RED_PW_4}
+      - TZ=Europe/Zurich
+      - NODE_RED_ADMIN_PW=${NODE_RED_PW_4}
     ports:
-      - "${PORT_GROUP_4}:1880"
+      - "${PORT_4}:1880"
     command:
       - "--settings"
       - "/settings/settings.js"
     networks:
-      - network_group_4
+      - network_server_4
     volumes:
-      - volume_group_4:/data
-      - ./settings:/settings
+      - volume_server_4:/data
+      - ./settings/settings.js:/data/settings.js
+    env_file:
+      - .env
 
-  server_group_5:
+  node-red_server_5:
     image: nodered/node-red:latest
     environment:
-      TZ: Europe/Amsterdam
-      NODE_RED_ADMIN_PW: ${NODE_RED_PW_5}
+      - TZ=Europe/Zurich
+      - NODE_RED_ADMIN_PW=${NODE_RED_PW_5}
     ports:
-      - "${PORT_GROUP_5}:1880"
+      - "${PORT_5}:1880"
     command:
       - "--settings"
       - "/settings/settings.js"
     networks:
-      - network_group_5
+      - network_server_5
     volumes:
-      - volume_group_5:/data
-      - ./settings:/settings
+      - volume_server_5:/data
+      - ./settings/settings.js:/data/settings.js
+    env_file:
+      - .env
 
-  server_group_6:
+  node-red_server_6:
     image: nodered/node-red:latest
     environment:
-      TZ: Europe/Amsterdam
-      NODE_RED_ADMIN_PW: ${NODE_RED_PW_6}
+      - TZ=Europe/Zurich
+      - NODE_RED_ADMIN_PW=${NODE_RED_PW_6}
     ports:
-      - "${PORT_GROUP_6}:1880"
+      - "${PORT_6}:1880"
     command:
       - "--settings"
       - "/settings/settings.js"
     networks:
-      - network_group_6
+      - network_server_6
     volumes:
-      - volume_group_6:/data
-      - ./settings:/settings
+      - volume_server_6:/data
+      - ./settings/settings.js:/data/settings.js
+    env_file:
+      - .env
 
-  server_group_7:
+  node-red_server_7:
     image: nodered/node-red:latest
     environment:
-      TZ: Europe/Amsterdam
-      NODE_RED_ADMIN_PW: ${NODE_RED_PW_7}
+      - TZ=Europe/Zurich
+      - NODE_RED_ADMIN_PW=${NODE_RED_PW_7}
     ports:
-      - "${PORT_GROUP_7}:1880"
+      - "${PORT_7}:1880"
     command:
       - "--settings"
       - "/settings/settings.js"
     networks:
-      - network_group_7
+      - network_server_7
     volumes:
-      - volume_group_7:/data
-      - ./settings:/settings
-
-  server_group_8:
-    image: nodered/node-red:latest
-    environment:
-      TZ: Europe/Amsterdam
-      NODE_RED_ADMIN_PW: ${NODE_RED_PW_8}
-    ports:
-      - "${PORT_GROUP_8}:1880"
-    command:
-      - "--settings"
-      - "/settings/settings.js"
-    networks:
-      - network_group_8
-    volumes:
-      - volume_group_8:/data
-      - ./settings:/settings
-      
-  server_group_9:
-    image: nodered/node-red:latest
-    environment:
-      TZ: Europe/Amsterdam
-      NODE_RED_ADMIN_PW: ${NODE_RED_PW_9}
-    ports:
-      - "${PORT_GROUP_9}:1880"
-    command:
-      - "--settings"
-      - "/settings/settings.js"
-    networks:
-      - network_group_9
-    volumes:
-      - volume_group_9:/data
-      - ./settings:/settings
-
+      - volume_server_7:/data
+      - ./settings/settings.js:/data/settings.js
+    env_file:
+      - .env
+     
 volumes:
-  volume_group_1:
-  volume_group_2:
-  volume_group_3:
-  volume_group_4:
-  volume_group_5:
-  volume_group_6:
-  volume_group_7:
-  volume_group_8:
-  volume_group_9:
-
+  volume_server_1:
+  volume_server_2:
+  volume_server_3:
+  volume_server_4:
+  volume_server_5:
+  volume_server_6:
+  volume_server_7:
+  volume_server_8:
+  
 networks:
-  network_group_1:
-  network_group_2:
-  network_group_3:
-  network_group_4:
-  network_group_5:
-  network_group_6:
-  network_group_7:
-  network_group_8:
-  network_group_9:
-
+  network_server_1:
+  network_server_2:
+  network_server_3:
+  network_server_4:
+  network_server_5:
+  network_server_6:
+  network_server_7:
+  network_server_8:
