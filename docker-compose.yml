@@ -134,7 +134,6 @@ volumes:
   volume_server_5:
   volume_server_6:
   volume_server_7:
-  volume_server_8:
   
 networks:
   network_server_1:
@@ -144,4 +143,3 @@ networks:
   network_server_5:
   network_server_6:
   network_server_7:
-  network_server_8:
